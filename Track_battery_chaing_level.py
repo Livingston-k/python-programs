@@ -6,9 +6,9 @@ while True:
     Battery = psutil.sensors_battery()
     Percentage_of_battry = Battery.percent
     Pluged = Battery.power_plugged
-    if Percentage_of_battry == 100 and Pluged == True:
+    if Percentage_of_battry == 100 and Pluged is True:
         pyttsx3.speak("Your Battery is fully charged kindly unplug the charger")
-    elif Percentage_of_battry < 30 and Pluged == False:
+    if Percentage_of_battry < 30 and Pluged is False:
         pyttsx3.speak("Your Battery is low please plug the charger")
     
     print(Percentage_of_battry)
